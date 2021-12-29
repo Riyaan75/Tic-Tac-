@@ -8,7 +8,7 @@ nav h1{
     position: relative;
 }
 nav{
-    background-color: rgb(32, 118, 139);
+     
     color:black;
     height: 50px;
     font-size: 25px;
@@ -16,13 +16,15 @@ nav{
     align-items: center;
     padding: 0 12px;
     font-family: "Montserrat";
+    margin-bottom: 50px;
 }
 nav ul{
     list-style-type: none;
 }
 .color{
     margin-bottom: 0px;
-    background-color: black;
+    margin-top: px;
+    background-color: rgb(32, 118, 139);
 }
 .gameContainer{
    background-color: rgb(32, 118, 139);
@@ -97,8 +99,11 @@ nav ul{
 
 @media screen and (max-width:800px)
 {
-    /*CSS Rules to be applied*/
+     nav{
+         margin-top: 35px;
+     }
     .gameContainer{
+        display: flex;
          flex-wrap: wrap;
         
     }
@@ -107,9 +112,18 @@ nav ul{
     }
    
     .container{
-        display: grid;
+        display:flexbox;
+        flex-wrap: wrap;
         grid-template-rows: repeat(3,20vw);
         grid-template-columns: repeat(3,20vw);
+    }
+    .line{
+        background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: rgb(238, 238, 67);
+    transition: width 1s ease-in-out;
     }
 
 }
